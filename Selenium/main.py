@@ -1,15 +1,11 @@
-from selenium import webdriver
-from time import sleep
+import undetected_chromedriver as uc
+from selenium.webdriver.common.by import By
 
-options = webdriver.ChromeOptions()
+options = uc.ChromeOptions()
 
-options.add_argument("--start-maximized")
 
-driver = webdriver.Chrome(options=options)
+browser = uc.Chrome(options=options)
 
-driver.get("https://www.google.com/")
+browser.get("https://iporesult.cdsc.com.np/")
 
-sleep(30)
-
-driver.quit()
-
+browser.find_element(By.ID, "#boid").send_keys("123456789")
