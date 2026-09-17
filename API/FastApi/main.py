@@ -17,7 +17,7 @@ class member(BaseModel):
     role: str
 
 @cloudTechMembers.post("/Members")
-def create_member(m: member):
+def add_new_member(m: member):
     Members.append(m.model_dump())
     with open(FILE, "w") as f: json.dump(Members, f)
     return m
@@ -29,5 +29,6 @@ def get_all(limit: int = 10):
 
 @cloudTechMembers.get("/Members/{member_id}")
 def get_member(member_id: int):
-    if member_id < len(Members): return Members[member_id]
-    raise HTTPException(404)
+    if member_id < len(Members): 
+        return Members[member_id]
+    raise HTTPException(status_code=404, detail=f"Member {member_id} not found")
