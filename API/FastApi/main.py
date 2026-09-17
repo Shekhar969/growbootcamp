@@ -1,0 +1,33 @@
+import json
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+
+cloudTechMembers, FILE = FastAPI(), "members.json"
+
+def load():
+    try:
+        with open(FILE) as f: return json.load(f)
+    except: return []
+
+Members = load()
+
+class member(BaseModel):
+    id: int
+    memberName: str
+    role: str
+
+@cloudTechMembers.post("/Members")
+def create_member(m: member):
+    Members.append(m.model_dump())
+    with open(FILE, "w") as f: json.dump(Members, f)
+    return m
+
+
+@cloudTechMembers.get("/Members")
+def get_all(limit: int = 10):
+    return Members[:limit]
+
+@cloudTechMembers.get("/Members/{member_id}")
+def get_member(member_id: int):
+    if member_id < len(Members): return Members[member_id]
+    raise HTTPException(404)
