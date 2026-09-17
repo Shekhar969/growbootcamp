@@ -22,13 +22,20 @@ def add_new_member(m: member):
     with open(FILE, "w") as f: json.dump(Members, f)
     return m
 
+@cloudTechMembers.put("/Members/{member_id}")
+def update_member(member_id: int, m: member):
+    if member_id < len(Members):
+        Members[member_id] = m.model_dump()
+        with open(FILE, "w") as f: json.dump(Members, f)
+        return m
+    raise HTTPException(404, detail="Member not found")
 
 @cloudTechMembers.get("/Members")
-def get_all(limit: int = 10):
+def get_all_members(limit: int = 10):
     return Members[:limit]
 
 @cloudTechMembers.get("/Members/{member_id}")
-def get_member(member_id: int):
+def get_member_byId(member_id: int):
     if member_id < len(Members): 
         return Members[member_id]
     raise HTTPException(status_code=404, detail=f"Member {member_id} not found")
