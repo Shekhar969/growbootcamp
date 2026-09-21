@@ -1,58 +1,46 @@
-GrowBootcamp QA Automation
-About the Project
-This repository contains QA automation work developed as part of the GrowBootcamp project.
+# GrowBootcamp QA Automation
 
+## **About the Project**
+
+This repository contains QA automation work developed as part of the GrowBootcamp project.
 The project is focused on designing and executing automated tests for application functionality, APIs, and other quality-assurance scenarios.
 
- Objectives
-Automate repetitive test scenarios.
+## **Objectives**
 
-Validate application functionality.
+Automate repetitive test scenarios.<br>
+Validate application functionality.<br>
+Perform API testing and verification.<br>
+Improve test coverage and reliability.<br>
+Identify defects early in the development cycle.<br>
+Maintain reusable and maintainable automation code.<br>
 
-Perform API testing and verification.
 
-Improve test coverage and reliability.
+## **Testing Areas**
 
-Identify defects early in the development cycle.
-
-Maintain reusable and maintainable automation code.
-
-Testing Areas
 The project may include testing for:
 
-API testing
+API Testing<br>
+Functional Testing<br>
+Regression Testing<br>
+Positive and Negative Test Scenarios<br>
+Request/Response Validation<br>
+Status Code Validation<br>
+Data Validation<br>
+Authentication and Authorization Testing<br>
+Error Handling Validation<br>
+Test Case Design<br>
+Test Scenario Design<br>
+Test Plan Creation<br>
+Test Execution<br>
+Test Report Generation<br>
+Bug/Defect Reporting<br>
 
-Functional testing
+## **Tools & Technologies**
 
-Regression testing
-
-Positive and negative test scenarios
-
-Request/response validation
-
-Status code validation
-
-Data validation
-
-Authentication and authorization testing
-
-Error handling validation
-
-Tools & Technologies
 Depending on the test module, this project can use:
 
-Java
-
-REST Assured
-
-TestNG / JUnit
-
-Maven
-
-Git & GitHub
-
-Postman
-
-JSON
-
-IntelliJ IDEA / VS Code
+Postman<br>
+Selenium<br>
+REST Assured<br>
+JUnit
+TestNG
