@@ -3,11 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>PremiumPulse</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <script src="script.js"/>
+
+    <main class="container">
+
+        <h1>PremiumPulse</h1>
+
+        <p class="subtitle">
+            Location-based insurance premium calculator
+        </p>
+
+
+        <!-- Location -->
+        <section class="card">
+
+            <label for="location">
+                Select Location
+            </label>
+
+            <select id="location">
+
+                <option value="1">Kathmandu</option>
+                <option value="2">Pokhara</option>
+                <option value="3">Butwal</option>
+                <option value="4">Nepalgunj</option>
+                <option value="5">Bharatpur</option>
+                <option value="6">Biratnagar</option>
+                <option value="7">Dharan</option>
+                <option value="8">Hetauda</option>
+
+            </select>
+
+        </section>
+
+
+        <!-- Accident Slider -->
+        <section class="card">
+
+            <label for="accidents">
+                Number of Accidents
+            </label>
+
+            <div class="slider-container">
+
+                <span>0</span>
+
+                <input
+                    type="range"
+                    id="accidents"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span>100</span>
+
+            </div>
+
+            <p>
+                Accidents:
+                <strong id="accidentValue">0</strong>
+            </p>
+
+        </section>
+
+
+        <!-- Premium -->
+        <section class="premium-card">
+
+            <p>Estimated Premium</p>
+
+            <h2 id="premium">
+                Rs. 0
+            </h2>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
