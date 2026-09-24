@@ -1,0 +1,1 @@
+SELECT * from Students,Teacher,Depertement
