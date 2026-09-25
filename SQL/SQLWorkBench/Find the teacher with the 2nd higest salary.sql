@@ -1,13 +1,15 @@
 SELECT salary FROM Teacher ORDER BY salary DESC LIMIT 1,1;
 
+SELECT * FROM Teacher;
+
+SELECT * FROM Depertement;
+
+SELECT * FROM Students;
 
 SELECT AVG(salary) As AverageTeacherSalary FROM Teacher;
 
 SELECT MIN(salary) As MinimunTeacherSalary, MAX(salary) AS MaximumTeacherSalary FROM Teacher;
 
-SELECT * FROM Teacher;
-
-SELECT * FROM Depertement;
 
 SELECT s.StudentId, s.StudentFirstName, s.StudentLastName, d.DepertementName
 FROM Students s INNER JOIN Depertement d ON s.DepartmentID = d.DepertementId;
