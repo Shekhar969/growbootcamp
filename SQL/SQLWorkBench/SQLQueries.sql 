@@ -38,5 +38,3 @@ SELECT d.DepertementName, Group_concat(CONCAT(s.StudentFirstName," ", s.StudentL
 RIGHT JOIN Depertement d ON s.DepartmentID =d.DepertementId
 GROUP BY d.DepertementName ;
 
-
-
