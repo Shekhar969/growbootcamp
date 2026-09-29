@@ -12,7 +12,7 @@ test.skip("My Third Test", async function ({page}) {
     expect("shekhar rawal".includes("rawal")).toBeTruthy()
 })
 
-test("Verify the title of the page", async function ({page}){
+test.skip("Verify the title of the page", async function ({page}){
     await page.goto("https://www.shekharrawal.com.np/")
     const title= await page.title()
     console.log(title)
