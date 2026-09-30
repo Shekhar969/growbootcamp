@@ -19,9 +19,7 @@ class student(students):
         def intro(self):
           print("Hello", self.name, "Your Selected course is", students.course,"Your fee per sem is",students._feepermonth*6 )
 
-
 std=student("shekhar")
 
 std.intro()
-
 std.showpassword()
