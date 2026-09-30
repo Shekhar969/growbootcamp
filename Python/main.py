@@ -65,3 +65,4 @@ def ADD(a, b):
 
 ADD(a,b)
 
+#Variables Global and Local
