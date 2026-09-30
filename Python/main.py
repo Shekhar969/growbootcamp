@@ -64,5 +64,3 @@ def ADD(a, b):
     print(a, "+", b, "=", c)
 
 ADD(a,b)
-
-#Variables Global and Local
