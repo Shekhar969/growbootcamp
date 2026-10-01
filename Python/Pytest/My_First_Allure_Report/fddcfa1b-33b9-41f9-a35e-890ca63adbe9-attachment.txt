@@ -1,0 +1,6 @@
+Item is in stock iceCream
+Item is in stock iceCream
+Item is in stock apple
+Item is in stock tshirt
+Item is not in stock Remove this item pants
+Item is in stock shoes
