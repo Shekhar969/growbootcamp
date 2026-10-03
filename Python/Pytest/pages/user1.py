@@ -1,7 +1,18 @@
-userId=1
-userName="Shekhar Rawal@"
-balance=2000
-itemsPrachased=("iceCream","iceCream","apple","tshirt","pants","shoes")
+userId = 1
+
+userName = "Shekhar Rawal@!"
+
+balance = 2000
+
+itemsPrachased = (
+    "iceCream",
+    "iceCream",
+    "apple",
+    "tshirt",
+    "pants",
+    "shoes"
+)
+
 itemsInStock = {
     "iceCream": 100,
     "apple": 300,
@@ -10,12 +21,17 @@ itemsInStock = {
     "shoes": 1200
 }
 
+
 def checkItemInStock():
+    available_items = []
+
     for item in itemsPrachased:
         if item in itemsInStock:
-            print("Item is in stock",item)
-        else:
-            print("Item is not in stock","Remove this item",item)
+            available_items.append(item)
+
+    return available_items
+
+
 
 def calcTotal():
     total = 0
@@ -28,13 +44,4 @@ def calcTotal():
 
 
 def suffentbalance():
-    if(calcTotal()<=balance):
-        return True
-    else:
-        return False
-
-calcTotal();
-checkItemInStock();
-
-isSuffent=suffentbalance()
-print("Balance is Suffent:",isSuffent)
+    return calcTotal() <= balance
