@@ -1,0 +1,59 @@
+Playwright Pytest Automation
+
+This project automates the Login and User Registration modules of the DemoQA application using Playwright, Pytest, and Allure.
+
+Setup
+
+Create and activate the virtual environment:
+
+python3 -m venv .env
+source .env/bin/activate
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+playwright install
+
+Verify Installation
+python --version
+pytest --version
+playwright --version
+allure --version
+
+
+Verify Allure:
+
+pytest --help | grep allure
+
+
+You should see:
+
+--alluredir=DIR
+
+Run Tests
+pytest --headed -s --alluredir=allure-results ./tests
+
+View Allure Report
+allure serve allure-results
+
+Test Coverage
+Login
+
+Valid login
+
+Invalid username
+
+Invalid password
+
+Empty username and password
+
+Registration
+
+Valid registration
+
+Existing username
+
+Invalid password
+
+Application: https://demoqa.com/login
