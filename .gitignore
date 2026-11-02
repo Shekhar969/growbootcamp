@@ -24,3 +24,5 @@ target/
 .env.*
 
 E2E*
+
+node_modules
